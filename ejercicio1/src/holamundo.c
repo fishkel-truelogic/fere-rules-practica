@@ -1,10 +1,8 @@
 /*
  ============================================================================
  Name        : holamundo.c
- Author      : 
- Version     :
- Copyright   : Your copyright notice
- Description : Hello World in C, Ansi-style
+ Author      : lfishkel
+ Version     : 1.0
  ============================================================================
  */
 
@@ -15,28 +13,27 @@
 #include "lib/sys/feresys.h"
 
 int main(void) {
+
 	char* a = "hola ";
 	char* b = "mundo";
+
 	printf("%s\n", string_concat(a, b));
 	getchar();
 
-	unsigned int lenA = strlen(a);
-	unsigned int lenB = strlen(b);
-	unsigned int size = sizeof(char) * (lenA + lenB);
-	char* result = (char*) malloc(size);
+	char* concat = (char*) malloc(mallocSize(sizeof(char), strlen(a), strlen(b), -1));
+	string_concat_dinamyc(a, b, &concat);
 
-	string_concat_dinamyc(a, b, &result);
-
-	printf("%s\n", result);
+	printf("%s\n", concat);
 	getchar();
 
 	char* user = (char*) malloc(mallocSize(sizeof(char), 8, -1));
 	char* dominio = (char*) malloc(mallocSize(sizeof(char), 40, -1));
-
 	char* mail = "lfishkel@truelogicsoftware.com";
+
 	mail_split(mail, &user, &dominio);
 
 	printf("el user es %s y el dominio es %s", user, dominio);
+	getchar();
 
 	return EXIT_SUCCESS;
 }
