@@ -11,8 +11,9 @@ Realizar las siguientes funciones (revisar qué funciones de Ansi C nos pueden a
 *   =>
 *   saludo = "Hola Ritchie"
 */
-´char* string_concat(const char*, const char*);´
-
+```
+char* string_concat(const char*, const char*);´
+```
 /*
 *   Asigna en el tercer parámetro, la concatenación
 *   de los primeros dos Strings
@@ -23,8 +24,9 @@ Realizar las siguientes funciones (revisar qué funciones de Ansi C nos pueden a
 *   =>
 *   saludo = "Hola Ritchie"
 */
-´void string_concat_dinamyc(const char*, const char*, char**);´
-
+```
+void string_concat_dinamyc(const char*, const char*, char**);´
+```
 /*
 *   Separa el mail en un usuario y un dominio.
 *   Ejemplo:
@@ -35,4 +37,6 @@ Realizar las siguientes funciones (revisar qué funciones de Ansi C nos pueden a
 *   user = "ritchie"
 *   dominio = "ansic.com.ar"
 */
-´void mail_split(const char* mail, char** user, char** dominio);´
+```
+void mail_split(const char* mail, char** user, char** dominio);´
+```
